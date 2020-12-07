@@ -4,6 +4,9 @@ plugins {
 
     // Shadow Plugin (to generate a Fat JAR)
     id("com.github.johnrengelman.shadow") version "6.1.0"
+
+    // ktlint Plugin
+    id("org.jlleitschuh.gradle.ktlint") version "9.4.1"
 }
 
 group = "org.example"
