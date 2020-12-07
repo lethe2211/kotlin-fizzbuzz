@@ -25,4 +25,10 @@ tasks {
     compileTestKotlin {
         kotlinOptions.jvmTarget = "1.8"
     }
+    jar {
+        // Specify the main class
+        manifest {
+            attributes["Main-Class"] = "org.example.demo.MainKt"
+        }
+    }
 }
