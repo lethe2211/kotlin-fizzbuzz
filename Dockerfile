@@ -17,5 +17,5 @@ RUN ls -l /opt/app/build/libs/
 # Runtime stage
 FROM adoptopenjdk:11-jre-hotspot
 WORKDIR /opt/app
-COPY --from=builder /opt/app/build/libs/gradle-kotlin-sample-1.0-SNAPSHOT-all.jar /opt/app
-ENTRYPOINT ["java", "-jar", "/opt/app/gradle-kotlin-sample-1.0-SNAPSHOT-all.jar"]
+COPY --from=builder /opt/app/build/libs/kotlin-unittests-sample-1.0-SNAPSHOT-all.jar /opt/app
+ENTRYPOINT ["java", "-jar", "/opt/app/kotlin-unittests-sample-1.0-SNAPSHOT-all.jar"]
