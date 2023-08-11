@@ -87,6 +87,8 @@ internal class SUTTest {
                 assertEquals(expected, actual)
             }
 
+            // Bonuses
+
             @Test
             fun `Adding "+" at the beginning of n does not change the behavior`() {
                 val expected = "16"
@@ -97,14 +99,12 @@ internal class SUTTest {
                 assertEquals(expected, actual)
             }
 
-            // Bonuses
-
             @Test
-            fun `If n consists of digits but starts with "+0", return "error"`() {
-                val expected = "fizz"
+            fun `Adding "+0" at the beginning of n does not change the behavior`() {
+                val expected = "124"
 
                 val sut = SUT()
-                val actual = sut.fizzbuzz("+0123")
+                val actual = sut.fizzbuzz("+0124")
 
                 assertEquals(expected, actual)
             }
